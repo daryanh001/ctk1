@@ -1,5 +1,5 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_repeat" id="237" inline="true" x="-551" y="-418">
+  <block type="controls_repeat" id="237" inline="true" x="-591" y="-394">
     <value name="TIMES">
       <block type="math_number" id="258">
         <field name="NUM">2</field>
@@ -11,11 +11,34 @@
           <block type="robot_delay" id="131" inline="true">
             <value name="DELAY">
               <block type="math_number" id="138">
-                <field name="NUM">5000</field>
+                <field name="NUM">1000</field>
               </block>
             </value>
             <next>
-              <block type="movement_stutter" id="119"></block>
+              <block type="movement_stutter" id="119">
+                <next>
+                  <block type="robot_delay" id="293" inline="true">
+                    <value name="DELAY">
+                      <block type="math_number" id="300">
+                        <field name="NUM">3</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="movement_reverse" id="311">
+                        <next>
+                          <block type="robot_delay" id="314" inline="true">
+                            <value name="DELAY">
+                              <block type="math_number" id="315">
+                                <field name="NUM">5000</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
             </next>
           </block>
         </next>
